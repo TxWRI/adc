@@ -1,0 +1,6 @@
+template:
+  package: twriTemplates
+  bootstrap: 5
+
+  structure:
+    right: [search, github]
