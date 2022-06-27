@@ -1,6 +1,11 @@
+url: https://txwri.github.io/adc/
 template:
   package: twriTemplates
   bootstrap: 5
 
+navbar:
   structure:
     right: [search, github]
+
+repo:
+  branch: gh-pages
