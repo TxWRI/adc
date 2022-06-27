@@ -16,3 +16,4 @@ Imports:
     runner,
     stats
 RoxygenNote: 7.1.2
+Config/Needs/website: TxWRI/twriTemplates
