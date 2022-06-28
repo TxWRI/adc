@@ -29,6 +29,7 @@
 #'   Water Resources Research 48 (4). \url{https://doi.org/10.1029/2011WR011080}.
 #' @return vector of values the same length as \code{discharge}.
 #' @export
+#' @importFrom katex math_to_rd
 #' @examples
 #' # Standard use case
 #' ma <- sdf(lavaca$Flow, delta=0.95)

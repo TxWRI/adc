@@ -51,6 +51,7 @@
 #'
 #' @export
 #' @importFrom runner runner
+#' @importFrom katex math_to_rd
 #' @examples
 #'  ## examples from Ryberg & Vechia 2012
 #'  ## Long-term Flow Anomaly LTFA

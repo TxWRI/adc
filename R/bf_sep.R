@@ -48,6 +48,7 @@
 #'   will vary slightly.
 #'
 #' @return vector of numeric values representing estimated baseflow.
+#' @importFrom katex math_to_rd
 #' @export
 #' @examples
 #' # Standard use case

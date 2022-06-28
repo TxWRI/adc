@@ -13,9 +13,8 @@ LazyData: true
 Depends: 
     R (>= 2.10)
 Imports:
+    katex,
     runner,
     stats
-Suggets:
-    katex
 RoxygenNote: 7.1.2
 Config/Needs/website: TxWRI/twriTemplates
