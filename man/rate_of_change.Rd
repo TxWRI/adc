@@ -22,10 +22,12 @@ Estimate the rate of change or first derivative of the raw mean daily streamflow
 }
 \examples{
 ## calculate the first deriv of the smoothed function between Date and streamflow
-rate_of_change(lavaca$Flow, lavaca$Date)
+rate <- rate_of_change(lavaca$Flow, lavaca$Date)
+head(rate)
 
 ## Return the first deriv on raw measurements
-rate_of_change(lavaca$Flow, lavaca$Date, smooth = FALSE)
+rate2 <- rate_of_change(lavaca$Flow, lavaca$Date, smooth = FALSE)
+head(rate2)
 
 ## Use in dplyr
 \dontrun{

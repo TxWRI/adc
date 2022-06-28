@@ -86,7 +86,7 @@ Ryberg, Karen R., and Aldo V. Vecchia. 2012. “WaterData—An R Package for
 
  Vecchia, Aldo V., Robert J. Gilliom, Daniel J. Sullivan, David L. Lorenz,
  and Jeffrey D. Martin. 2009. “Trends in Concentrations and Use of
- Agricultural Herbicides for Corn Belt Rivers, 1996−2006.” Environmental
+ Agricultural Herbicides for Corn Belt Rivers, 1996-2006.” Environmental
  Science & Technology 43 (24): 9096–9102.
  \url{https://doi.org/10.1021/es902122j}.
 }

@@ -40,6 +40,7 @@ The smooth discounted flow (SDF) was proposed by Kuhnert et al.
 \examples{
 # Standard use case
 ma <- sdf(lavaca$Flow, delta=0.95)
+head(ma)
 
 # will work in tidy workflows using dplyr if installed
 \dontrun{
