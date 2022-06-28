@@ -18,3 +18,6 @@ Imports:
     stats
 RoxygenNote: 7.1.2
 Config/Needs/website: TxWRI/twriTemplates
+Suggests: 
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3
