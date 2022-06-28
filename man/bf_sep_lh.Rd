@@ -60,7 +60,6 @@ bf_sep_lh(lavaca$Flow, a = 0.975)
 
 # will work in tidy workflows using dplyr if installed
 \dontrun{
-library(dplyr)
 lavaca |> mutate(ma = bf_sep_lh(Flow, a = 0.975))
 }
 }
