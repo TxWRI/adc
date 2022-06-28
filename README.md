@@ -15,10 +15,10 @@ for rating curve regression.
 
 ## Installation
 
-I will add installation directions later!
+adc is not on CRAN. Pre-built binaries can be installed from r-universe:
 
 ``` r
-# FILL THIS IN! HOW CAN PEOPLE INSTALL YOUR DEV PACKAGE?
+install.packages('adc', repos = c(txwri = 'https://txwri.r-universe.dev'))
 ```
 
 ## Example
@@ -47,5 +47,5 @@ plot(lavaca$Date, x, type = "l", xlab = "Date", ylab = "Anomaly [unitless]")
 
 The packages also includes functions to calculate an exponentially
 weighted discounted flow, base-flow, and rate of change for mean daily
-streamflow. Functions generally work well using the `mutate()` function
-in dplyr to facilitate tidy workflows.
+streamflow. Functions generally work well using the `dplyr::mutate()`
+function to facilitate tidy workflows.

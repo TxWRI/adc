@@ -11,10 +11,12 @@
 #' @importFrom stats predict smooth.spline
 #' @examples
 #' ## calculate the first deriv of the smoothed function between Date and streamflow
-#' rate_of_change(lavaca$Flow, lavaca$Date)
+#' rate <- rate_of_change(lavaca$Flow, lavaca$Date)
+#' head(rate)
 #'
 #' ## Return the first deriv on raw measurements
-#' rate_of_change(lavaca$Flow, lavaca$Date, smooth = FALSE)
+#' rate2 <- rate_of_change(lavaca$Flow, lavaca$Date, smooth = FALSE)
+#' head(rate2)
 #'
 #' ## Use in dplyr
 #' \dontrun{
@@ -27,6 +29,11 @@ rate_of_change <- function(discharge,
                            dates,
                            smooth = TRUE) {
   ##check that dates are Dates or numeric
+  check_qd_class(discharge, dates)
+
+  if (!is.logical(smooth)) {
+    stop("smooth must be a logical (TRUE or FALSE)")
+  }
 
 
   # calculate dQ/d(t)t
