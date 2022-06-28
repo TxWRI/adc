@@ -10,3 +10,4 @@
 ^pkgdown$
 .renvignore
 ^\.github$
+^codecov\.yml$
