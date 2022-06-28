@@ -70,10 +70,12 @@ Must be class <code>"Date"</code>.</p></dd>
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
     <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="co">## calculate the first deriv of the smoothed function between Date and streamflow</span></span>
-<span><span class="fu">rate_of_change</span><span class="op">(</span><span class="va">lavaca</span><span class="op">$</span><span class="va">Flow</span>, <span class="va">lavaca</span><span class="op">$</span><span class="va">Date</span><span class="op">)</span></span>
+<span><span class="va">rate</span> <span class="op">&lt;-</span> <span class="fu">rate_of_change</span><span class="op">(</span><span class="va">lavaca</span><span class="op">$</span><span class="va">Flow</span>, <span class="va">lavaca</span><span class="op">$</span><span class="va">Date</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">rate</span><span class="op">)</span></span>
 <span></span>
 <span><span class="co">## Return the first deriv on raw measurements</span></span>
-<span><span class="fu">rate_of_change</span><span class="op">(</span><span class="va">lavaca</span><span class="op">$</span><span class="va">Flow</span>, <span class="va">lavaca</span><span class="op">$</span><span class="va">Date</span>, smooth <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span>
+<span><span class="va">rate2</span> <span class="op">&lt;-</span> <span class="fu">rate_of_change</span><span class="op">(</span><span class="va">lavaca</span><span class="op">$</span><span class="va">Flow</span>, <span class="va">lavaca</span><span class="op">$</span><span class="va">Date</span>, smooth <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">rate2</span><span class="op">)</span></span>
 <span></span>
 <span><span class="co">## Use in dplyr</span></span>
 <span><span class="kw">if</span> <span class="op">(</span><span class="cn">FALSE</span><span class="op">)</span> <span class="op">{</span></span>

@@ -61,9 +61,9 @@
 <div class="section level2">
 <h2 id="installation">Installation<a class="anchor" aria-label="anchor" href="#installation"></a>
 </h2>
-<p>I will add installation directions later!</p>
+<p>adc is not on CRAN. Pre-built binaries can be installed from r-universe:</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="co"># FILL THIS IN! HOW CAN PEOPLE INSTALL YOUR DEV PACKAGE?</span></span></code></pre></div>
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">'adc'</span>, repos <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span>txwri <span class="op">=</span> <span class="st">'https://txwri.r-universe.dev'</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
 </div>
 <div class="section level2">
 <h2 id="example">Example<a class="anchor" aria-label="anchor" href="#example"></a>
@@ -84,7 +84,7 @@
 <span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">lavaca</span><span class="op">$</span><span class="va">Date</span>, <span class="va">x</span>, type <span class="op">=</span> <span class="st">"l"</span>, xlab <span class="op">=</span> <span class="st">"Date"</span>, ylab <span class="op">=</span> <span class="st">"Anomaly [unitless]"</span><span class="op">)</span></span></code></pre></div>
 <p><img src="reference/figures/README-example-1.png" width="100%"></p>
-<p>The packages also includes functions to calculate an exponentially weighted discounted flow, base-flow, and rate of change for mean daily streamflow. Functions generally work well using the <code>mutate()</code> function in dplyr to facilitate tidy workflows.</p>
+<p>The packages also includes functions to calculate an exponentially weighted discounted flow, base-flow, and rate of change for mean daily streamflow. Functions generally work well using the <code>dplyr::mutate()</code> function to facilitate tidy workflows.</p>
 </div>
 </div>
   </main><aside class="col-md-3"><div class="license">

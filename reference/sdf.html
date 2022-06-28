@@ -94,6 +94,7 @@ the current daily flow.</p></dd>
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
     <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="co"># Standard use case</span></span>
 <span><span class="va">ma</span> <span class="op">&lt;-</span> <span class="fu">sdf</span><span class="op">(</span><span class="va">lavaca</span><span class="op">$</span><span class="va">Flow</span>, delta<span class="op">=</span><span class="fl">0.95</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">ma</span><span class="op">)</span></span>
 <span></span>
 <span><span class="co"># will work in tidy workflows using dplyr if installed</span></span>
 <span><span class="kw">if</span> <span class="op">(</span><span class="cn">FALSE</span><span class="op">)</span> <span class="op">{</span></span>
