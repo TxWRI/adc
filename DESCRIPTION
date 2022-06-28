@@ -13,6 +13,7 @@ LazyData: true
 Depends: 
     R (>= 2.10)
 Imports:
+    katex,
     runner,
     stats
 RoxygenNote: 7.1.2
