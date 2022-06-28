@@ -27,12 +27,8 @@ rate_of_change <- function(discharge,
                            dates,
                            smooth = TRUE) {
   ##check that dates are Dates or numeric
-  if (!is.numeric(discharge)) {
-    stop("discharge must be 'numeric' class")
-  }
-  if (!(class(dates)[1] %in% c("Date", "POSIXlt", "POSIXct"))) {
-    stop("dates must be a 'Date', 'POSIXct', or 'POSIClt' class")
-  }
+  check_qd_class(discharge, dates)
+
   if (!is.logical(smooth)) {
     stop("smooth must be a logical (TRUE or FALSE)")
   }
