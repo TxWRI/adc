@@ -36,6 +36,12 @@ test_that("fa returns errors", {
                   T_2 = 15,
                   clean_up = TRUE,
                   transform = "log10"))
+  expect_error(fa(discharge = lavaca$Flow,
+                  dates = lavaca$Date,
+                  T_1 = "1 day",
+                  T_2 = "true",
+                  clean_up = TRUE,
+                  transform = "log10"))
 
 
   ## smooth isn't logical
@@ -51,7 +57,7 @@ test_that("fa returns errors", {
                   dates = lavaca$Date,
                   T_1 = "1 day",
                   T_2 = "period",
-                  clean_up = "true",
+                  clean_up = "TRUE",
                   transform = "sqrt"))
 })
 
@@ -60,6 +66,7 @@ test_that("fa returns expected", {
   ## should return numeric same length of input
   n <- length(lavaca$Flow)
 
+  # check each transform
   for (i in c(NA, "log10", "log")) {
     output <- fa(discharge = lavaca$Flow,
                  dates = lavaca$Date,
@@ -71,6 +78,7 @@ test_that("fa returns expected", {
     expect_equal(class(output), "numeric")
   }
 
+  # check each clean up
   for (i in c(TRUE, FALSE)) {
     output <- fa(discharge = lavaca$Flow,
                  dates = lavaca$Date,
@@ -78,6 +86,18 @@ test_that("fa returns expected", {
                  T_2 = "period",
                  clean_up = i,
                  transform = NA)
+    expect_equal(length(output), n)
+    expect_equal(class(output), "numeric")
+  }
+
+  ## check different T_2 periods
+  for (i in c("period", "1 year")) {
+    output <- fa(discharge = lavaca$Flow,
+                 dates = lavaca$Date,
+                 T_1 = "1 day",
+                 T_2 = i,
+                 clean_up = TRUE,
+                 transform = "log10")
     expect_equal(length(output), n)
     expect_equal(class(output), "numeric")
   }

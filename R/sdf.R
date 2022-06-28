@@ -43,8 +43,11 @@
 #'
 sdf <- function(discharge, delta = 0.95) {
   # check the delta is [0,1]
-  if (delta >= 1) stop("delta must be between 0 and 1")
-  if (delta <= 0) stop("delta must be between 0 and 1")
+  if (!is.numeric(delta)) stop("delta must be a number betwenn 0 and 1")
+  if (delta >= 1) stop("delta must be between a number between 0 and 1")
+  if (delta <= 0) stop("delta must be between a number between 0 and 1")
+
+  #check that discharge is numeric
   if (!is.numeric(discharge)) stop("discharge must be a numeric vector")
 
   q <- discharge[1]

@@ -64,6 +64,37 @@ bf_sep_lh <- function(discharge,
                    reflect = 30) {
 
   ## need to add checks for a, n, reflect. types and values.
+  if(!is.numeric(a)) {
+    stop("'a' must be a number")
+  }
+
+  if (a > 1 || a < 0) {
+    stop("'a' must be a number between 0 and 1")
+  }
+
+  ## n should be odd
+  if(!is.numeric(n)) {
+    stop("'n' should be a an odd number, probably 3")
+  }
+
+  if((n%%2 == 0)) {
+    stop("'n' should be an odd number")
+  }
+
+  ## reflect should be a number or NULL
+  if(!is.numeric(reflect)) {
+    if(!is.null(reflect)) {
+      stop("'reflect' must be a numeric value or NULL")
+    }
+  }
+
+  ## reflect must be smaller than length discharge
+  if(!is.null(reflect)) {
+    if(reflect > length(discharge)) {
+      stop("Value of 'reflect' must be less than or equal to length of 'discharge'")
+    }
+  }
+
 
   if(!is.null(reflect)) {
 
@@ -76,6 +107,8 @@ bf_sep_lh <- function(discharge,
     bf <- run_filter(discharge, a, n)
     ## removes the reflection from start and end of dataset
     bf <- bf[-c(1:reflect, (length(bf)-reflect):length(bf))]
+  } else {
+    bf <- run_filter(discharge, a, n)
   }
 
   return(bf)

@@ -10,12 +10,33 @@
 clean_flows <- function(discharge,
                         replace_0 = 0.001,
                         replace_neg = NA) {
+  ## check discharge is numeric
+  if (!is.numeric(discharge)) {
+    stop("'discharge' should be a numeric vector")
+  }
+
+  ## check replace_0 is numeric or NA
+  if (!is.numeric(replace_0)) {
+    if (!is.na(replace_0)) {
+      stop("'replace_0' must be numeric value between 0 and 10 or NA")
+    }
+  }
+
+  ## check replace_0 is appropriate value
   if (replace_0 < 0 & !is.na(replace_0) ) {
-    stop("replace_0 must be greater than or equal to 0.")
+    stop("'replace_0' must be numeric value between 0 and 10 or NA")
   }
   if (replace_0 > 10 & !is.na(replace_0) ) {
-    stop("replace_0 must be less than 10.")
+    stop("'replace_0' must be numeric value between 0 and 10 or NA")
   }
+
+  ## check replace_neg is numeric or NA
+  if (!is.numeric(replace_neg)) {
+    if (!is.na(replace_neg)) {
+      stop("'replace_neg' must be numeric value or NA")
+    }
+  }
+
 
   ## replace zero discharges with replace_0
   discharge_0 <- discharge == 0
