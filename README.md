@@ -6,6 +6,7 @@
 <!-- badges: start -->
 
 [![license](https://img.shields.io/badge/license-MIT%20+%20file%20LICENSE-lightgrey.svg)](https://choosealicense.com/)
+[![R-CMD-check](https://github.com/TxWRI/adc/workflows/R-CMD-check/badge.svg)](https://github.com/TxWRI/adc/actions)
 
 <!-- badges: end -->
 

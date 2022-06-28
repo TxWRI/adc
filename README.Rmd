@@ -21,6 +21,7 @@ knitr::opts_chunk$set(
 <!-- badges: start -->
 
 [![license](https://img.shields.io/badge/license-MIT + file LICENSE-lightgrey.svg)](https://choosealicense.com/)
+[![R-CMD-check](https://github.com/TxWRI/adc/workflows/R-CMD-check/badge.svg)](https://github.com/TxWRI/adc/actions)
 
 <!-- badges: end -->
 
