@@ -85,6 +85,12 @@ fa <- function(discharge,
                clean_up = FALSE,
                transform = "log10") {
 
+  check_qd_class(discharge, dates)
+
+  if (!is.logical(clean_up)) {
+    stop("clean_up must be a logical (TRUE or FALSE)")
+  }
+
   ## logic that dictates if discharge record needs to be cleaned up
   if(isTRUE(clean_up)) {
     discharge <- clean_flows(discharge = discharge)
@@ -121,6 +127,8 @@ fa <- function(discharge,
   if(is.na(valid)) {
     stop(paste("T_2 must be one of:", noquote(deparse(bquote(.(t_2_units))))))
   }
+
+  ## would be useful to check that T_2 is greater than T_1
 
 
   ## time period based mean calculated with runner
