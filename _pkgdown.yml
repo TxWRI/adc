@@ -4,6 +4,8 @@ template:
   bootstrap: 5
 
 navbar:
+  type: dark
+  bg: dark
   structure:
     right: [search, github]
 
