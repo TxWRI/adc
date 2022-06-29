@@ -11,3 +11,4 @@
 .renvignore
 ^\.github$
 ^codecov\.yml$
+^vignettes$

@@ -1,0 +1,104 @@
+---
+references:
+- id: lyne_stochastic_1979
+  author:
+  - family: Lyne
+    given: Vincent
+  - family: Hollick
+    given: M.
+  event: Institute of Engineers Australia National Conference
+  issued: 1979
+  key: IVGXS3ZM
+  libraryID: 1
+  page: 89-93
+  providerKey: 2509FBBE-5BB0-44C4-B119-6083A81ED673
+  publisher-place: Barton, Australia
+  title: Stochastic time-variable rainfall runoff modelling
+  type: paper-conference
+  volume: 79
+- id: ladson_standard_2013
+  author:
+  - family: Ladson
+    given: A. R.
+  - family: Brown
+    given: R.
+  - family: Neal
+    given: B.
+  - family: Nathan
+    given: R.
+  container-title: Australasian Journal of Water Resources
+  issue: 1
+  issued: 2013
+  key: 7V39QKK6
+  libraryID: 1
+  page: 25-34
+  providerKey: 2509FBBE-5BB0-44C4-B119-6083A81ED673
+  title: A standard approach to baseflow seperation using the Lyne and
+    Hollick filter
+  type: article-journal
+  volume: 17
+- id: vecchia_trends_2009
+  accessed: "14:23:12"
+  author:
+  - family: Vecchia
+    given: Aldo V.
+  - family: Gilliom
+    given: Robert J.
+  - family: Sullivan
+    given: Daniel J.
+  - family: Lorenz
+    given: David L.
+  - family: Martin
+    given: Jeffrey D.
+  container-title: Environmental Science & Technology
+  container-title-short: Environ. Sci. Technol.
+  DOI: 10.1021/es902122j
+  ISSN: 0013-936X, 1520-5851
+  issue: 24
+  issued: 2009-12-15
+  key: 8XKZXC8G
+  language: en
+  libraryID: 1
+  page: 9096-9102
+  providerKey: 2509FBBE-5BB0-44C4-B119-6083A81ED673
+  source: DOI.org (Crossref)
+  title: Trends in Concentrations and Use of Agricultural Herbicides for
+    Corn Belt Rivers, 1996−2006
+  type: article-journal
+  URL: "https://pubs.acs.org/doi/10.1021/es902122j"
+  volume: 43
+- id: kuhnert_quantifying_2012
+  accessed: "20:05:22"
+  author:
+  - family: Kuhnert
+    given: Petra M.
+  - family: Henderson
+    given: Brent L.
+  - family: Lewis
+    given: Stephen E.
+  - family: Bainbridge
+    given: Zoe T.
+  - family: Wilkinson
+    given: Scott N.
+  - family: Brodie
+    given: Jon E.
+  container-title: Water Resources Research
+  container-title-short: Water Resour. Res.
+  DOI: 10.1029/2011WR011080
+  ISSN: 00431397
+  issue: 4
+  issued: 2012-04
+  key: KSF3B5ZX
+  language: en
+  libraryID: 1
+  providerKey: 2509FBBE-5BB0-44C4-B119-6083A81ED673
+  source: DOI.org (Crossref)
+  title: "Quantifying total suspended sediment export from the Burdekin
+    River catchment using the loads regression estimator tool:
+    REGRESSION ESTIMATOR TOOL FOR POLLUTANT LOADS"
+  title-short: Quantifying total suspended sediment export from the
+    Burdekin River catchment using the loads regression estimator tool
+  type: article-journal
+  URL: "http://doi.wiley.com/10.1029/2011WR011080"
+  volume: 48
+...
