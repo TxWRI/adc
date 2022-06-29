@@ -8,6 +8,8 @@ Authors@R:
 Maintainer: Michael Schramm <mpschramm@gmail.com>
 Description: Calculates some antecedant discharge conditions using daily discharge measurements. This includes estimated flow anomalies, base flow, and smooth discounted flows.
 License: MIT + file LICENSE
+URL: https://github.com/TxWRI/adc
+BugReports: https://github.com/TxWRI/adc/issues
 Encoding: UTF-8
 LazyData: true
 Depends: 
