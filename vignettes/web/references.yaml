@@ -65,7 +65,6 @@ references:
   title: Trends in Concentrations and Use of Agricultural Herbicides for
     Corn Belt Rivers, 1996−2006
   type: article-journal
-  URL: "https://pubs.acs.org/doi/10.1021/es902122j"
   volume: 43
 - id: kuhnert_quantifying_2012
   accessed: "20:05:22"
@@ -94,11 +93,31 @@ references:
   providerKey: 2509FBBE-5BB0-44C4-B119-6083A81ED673
   source: DOI.org (Crossref)
   title: "Quantifying total suspended sediment export from the Burdekin
-    River catchment using the loads regression estimator tool:
-    REGRESSION ESTIMATOR TOOL FOR POLLUTANT LOADS"
+    River catchment using the loads regression estimator tool"
   title-short: Quantifying total suspended sediment export from the
     Burdekin River catchment using the loads regression estimator tool
   type: article-journal
-  URL: "http://doi.wiley.com/10.1029/2011WR011080"
   volume: 48
+- id: zhang_improving_2017
+  author:
+    - family: Zhang
+      given: Qian
+    - family: Ball
+      given: William P.
+  citation-key: zhang_improving_2017
+  container-title: Journal of Hydrology
+  container-title-short: Journal of Hydrology
+  DOI: 10.1016/j.jhydrol.2016.12.052
+  ISSN: '00221694'
+  issued:
+    - year: 2017
+      month: 4
+  language: en
+  page: 387-402
+  source: DOI.org (Crossref)
+  title: >-
+    Improving riverine constituent concentration and flux estimation by
+    accounting for antecedent discharge conditions
+  type: article-journal
+  volume: '547'
 ...
