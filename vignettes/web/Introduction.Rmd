@@ -2,6 +2,9 @@
 title: "Introduction"
 author: "Michael Schramm"
 date: "`r Sys.Date()`"
+output:
+  html_document:
+    math_method: "r-katex"
 bibliography: references.yaml
 ---
 
@@ -38,9 +41,10 @@ modeling. The primary package functions include:
     of the difference in streamflow at time T and T-1. Positive values
     mean streamflow is increasing and negative values mean streamflow is
     decreasing. This term can capture hysteresis effects in dissolved
-    solutes and hydrograph limbs. This function estimates
-    \$\\frac{\\delta Q}{\delta T}\$ on the raw data or predicts the
-    first derivative of the fitted spline between date and discharge.
+    solutes and hydrograph limbs. This function estimates $\frac{d Q}{d t}$ 
+    on the raw data or it will fit a cubic regression spline between date and 
+    discharge when the argument `smooth = TRUE` is used and return the
+    derivative of the fitted function.
 
 -   `sdf()` - the smooth discounted flow is an exponentially weighted
     average of streamflow values [@kuhnert_quantifying_2012]. This

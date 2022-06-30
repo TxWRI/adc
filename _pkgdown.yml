@@ -8,6 +8,3 @@ navbar:
   bg: dark
   structure:
     right: [search, github]
-
-repo:
-  branch: gh-pages
