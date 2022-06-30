@@ -6,6 +6,7 @@ output:
   html_document:
     math_method: "r-katex"
 bibliography: references.yaml
+csl: https://raw.githubusercontent.com/TxWRI/csl/main/twri-technical-report.csl
 ---
 
 ```{r setup, include = FALSE}
@@ -17,6 +18,8 @@ knitr::opts_chunk$set(
   fig.dim = c(8,4)
 )
 ```
+
+# Basic Functions
 
 The adc package provides a handful of functions for developing
 flow-based covariates useful in regression-based pollutant load
@@ -34,23 +37,26 @@ modeling. The primary package functions include:
     the current time period (day, week, month, year, etc.) from a prior
     period (days, weeks, months, years, or complete flow record)
     [@vecchia_trends_2009]. Positive values indicate the current period
-    is wetter than the prior period.
+    is wetter than the prior period. @zhang_improving_2017 demonstrate the use
+    of different time periods to account for long-term, mid-term, and short-term
+    flow anomalies.
 
 -   `rate_of_change()` - is the estimate of the current instantaneous
     rate of change in daily streamflow. This is essentially an estimate
-    of the difference in streamflow at time T and T-1. Positive values
-    mean streamflow is increasing and negative values mean streamflow is
-    decreasing. This term can capture hysteresis effects in dissolved
-    solutes and hydrograph limbs. This function estimates $\frac{d Q}{d t}$ 
-    on the raw data or it will fit a cubic regression spline between date and 
-    discharge when the argument `smooth = TRUE` is used and return the
-    derivative of the fitted function.
+    of the difference in streamflow at time $T$ and $T-1$ 
+    [@zhang_improving_2017]. Positive values mean streamflow is increasing and 
+    negative values mean streamflow is decreasing. This term can capture 
+    hysteresis effects in dissolved solutes and hydrograph limbs. This function 
+    estimates $\frac{d Q}{d t}$ on the raw data or it will fit a cubic 
+    regression spline between date and discharge when the argument 
+    `smooth = TRUE` is used and return the derivative of the fitted function.
 
 -   `sdf()` - the smooth discounted flow is an exponentially weighted
     average of streamflow values [@kuhnert_quantifying_2012]. This
     captures the integrated effect of all past flows with higher weight
     assigned to more recent flows than those that occurred long ago.
 
+# Usage
 All functions are intended to work on vectors of streamflow and
 Date/Time data. Each function will return a numeric vector the same
 length as the input arguments. An example dataset is provided:
@@ -88,9 +94,12 @@ head(ma)
 
 ```
 
+
+# Tidy Workflow
+
 These functions can also be used in a tidy workflow:
 
-```{r fig.height=8, fig.width=6}
+```{r fig.height=8, fig.width=6, message=FALSE, warning=FALSE}
 library(dplyr)
 library(ggplot2)
 library(patchwork)
@@ -116,12 +125,14 @@ plot_columns <- function(data, column, x_axis) {
     theme_minimal()
 }
 
+## apply the function to each variable
 plots <- lapply(c("Flow", "baseflow", "ltfa", "dqdt", "ma"),
                 plot_columns,
                 data = df,
                 x_axis = "Date")
 
+## use patchwork to put these all together
 plots[[1]] / (plots[[2]] + plots[[3]]) / (plots[[4]] + plots[[5]])
 ```
 
-## References
+# References
