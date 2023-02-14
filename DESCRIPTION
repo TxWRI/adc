@@ -1,14 +1,14 @@
 Package: adc
 Type: Package
 Title: Calculate Antecedant Discharge Conditions
-Version: 0.1.0
+Version: 1.0.0
 Authors@R: 
     person("Michael", "Schramm", , "mpschramm@gmail.com", role = c("aut", "cre"),
            comment = c(ORCID = "0000-0003-1876-6592"))
 Maintainer: Michael Schramm <mpschramm@gmail.com>
 Description: Calculates some antecedant discharge conditions using daily discharge measurements. This includes estimated flow anomalies, base flow, and smooth discounted flows.
 License: MIT + file LICENSE
-URL: https://github.com/TxWRI/adc
+URL: https://github.com/TxWRI/adc, https://txwri.github.io/adc/
 BugReports: https://github.com/TxWRI/adc/issues
 Encoding: UTF-8
 LazyData: true
@@ -18,7 +18,7 @@ Imports:
     katex,
     runner,
     stats
-RoxygenNote: 7.1.2
+RoxygenNote: 7.2.2
 Config/Needs/website: TxWRI/twriTemplates
 Suggests: 
     covr,

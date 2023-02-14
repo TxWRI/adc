@@ -19,6 +19,8 @@ knitr::opts_chunk$set(
 # adc
 
 <!-- badges: start -->
+[![adc status badge](https://txwri.r-universe.dev/badges/adc)](https://txwri.r-universe.dev)
+
 
 [![license](https://img.shields.io/badge/license-MIT + file LICENSE-lightgrey.svg)](https://choosealicense.com/)
 [![R-CMD-check](https://github.com/TxWRI/adc/workflows/R-CMD-check/badge.svg)](https://github.com/TxWRI/adc/actions)
@@ -26,11 +28,18 @@ knitr::opts_chunk$set(
 
 <!-- badges: end -->
 
-adc provides functions to calculate discharge-based covariates useful for rating curve regression.
+adc provides functions to calculate discharge-based covariates that can be useful 
+water quality rating curve regression.
 
 ## Installation
 
-adc is not on CRAN. Pre-built binaries can be installed from r-universe:
+Install adc from CRAN:
+
+```r
+install.packages('adc')
+```
+
+The development version is available on https://txwri.r-universe.dev/adc and can be installed with:
 
 ``` r
 install.packages('adc', repos = c(txwri = 'https://txwri.r-universe.dev'))
