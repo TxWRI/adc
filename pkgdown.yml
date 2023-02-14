@@ -1,9 +1,9 @@
-pandoc: 2.7.3
-pkgdown: 2.0.5
+pandoc: 2.19.2
+pkgdown: 2.0.7
 pkgdown_sha: ~
 articles:
   Introduction: web/Introduction.html
-last_built: 2022-06-30T20:18Z
+last_built: 2023-02-14T19:32Z
 urls:
   reference: https://txwri.github.io/adc/reference
   article: https://txwri.github.io/adc/articles
