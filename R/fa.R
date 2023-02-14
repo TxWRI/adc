@@ -2,33 +2,29 @@
 #'
 #' Flow anomalies are a dimensionless term that reflects the difference in in
 #' current discharges compared to past discharges. A positive flow anomaly
-#' indicates the current time period
-#' \Sexpr[results=rd, stage=build]{katex::math_to_rd("T_1", displayMode = FALSE)}
-#' is wetter than the precedent time period
-#' \Sexpr[results=rd, stage=build]{katex::math_to_rd("T_2", displayMode = FALSE)}.
+#' indicates the current time period, \eqn{T_{1}},
+#' is wetter than the precedent time period, \eqn{T_{2}}.
 #'
 #' @param discharge numeric vector of daily discharges
 #' @param dates vector of dates coresponding to daily discharge measurements.
 #'   Must be class \code{"Date"}.
-#' @param T_1 size of period
-#'   \Sexpr[results=rd, stage=build]{katex::math_to_rd("T_1", displayMode = FALSE)}
+#' @param T_1 size of period \eqn{T_{1}}
 #'   preceding a given day t. Specified in the same way as the \code{by} argument
 #'   in \code{\link[base]{seq.POSIXt}}.
-#' @param T_2 size of period
-#'   \Sexpr[results=rd, stage=build]{katex::math_to_rd("T_2", displayMode = FALSE)}
+#' @param T_2 size of period \eqn{T_{2}}
 #'   preceding a given day t. Specified in the same way as the \code{by} argument
 #'   in \code{seq.POSIXt}. Period T_2 is expected to be longer than T_1.
 #' @param clean_up logical. runs .... prior to ....
 #' @param transform on of \code{NA, log, log10},
 #'
-#' @return vector of numeric values corresponding to
-#'   \Sexpr[results=rd, stage=build]{ katex::math_to_rd("X_{T_1}(t) - X_{T_2}(t)", displayMode = FALSE)}.
+#' @return vector of numeric values corresponding to \eqn{X_{T_1}(t) - X_{T_2}(t)}.
 #'
-#' @details The FA term describes how different the antecedant discharge
+#' @details The FA term describes how different the antecedent discharge
 #'   conditions are for a selected temporal period compared to a selected period
 #'   or day of analysis. Ryberg and Vecchia (2014) and Vechia et al. (2009)
 #'   describe the flow anomaly (FA) term as:
-#'   \Sexpr[results=rd, stage=build]{katex::math_to_rd("FA(t)=X_{T_1}(t) - X_{T_2}(t)") }
+#'
+#'   \deqn{FA(t)=X_{T_1}(t) - X_{T_2}(t)}
 #'
 #'  The \code{T_1} and \code{T_2} arguments can be specified as character strings
 #'  containing one of \code{"sec"}, \code{"min"}, \code{"hour"}, \code{"day"},
@@ -47,11 +43,10 @@
 #'  and Jeffrey D. Martin. 2009. “Trends in Concentrations and Use of
 #'  Agricultural Herbicides for Corn Belt Rivers, 1996-2006.” Environmental
 #'  Science & Technology 43 (24): 9096–9102.
-#'  \url{https://doi.org/10.1021/es902122j}.
+#'  \doi{10.1021/es902122j}.
 #'
 #' @export
 #' @importFrom runner runner
-#' @importFrom katex math_to_rd
 #' @examples
 #'  ## examples from Ryberg & Vechia 2012
 #'  ## Long-term Flow Anomaly LTFA

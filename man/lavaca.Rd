@@ -7,12 +7,12 @@
 \format{
 A data frame with 9132 rows and 5 variables:
 \describe{
-  \item{agency_cd}{agency code, character}
-  \item{site_no}{site number, character}
-  \item{Date}{date, Date format}
-  \item{Flow}{mean daily stream flow, numeric}
-  \item{Flow_cd}{tag indicate data quality, character}
-  ...
+\item{agency_cd}{agency code, character}
+\item{site_no}{site number, character}
+\item{Date}{date, Date format}
+\item{Flow}{mean daily stream flow, numeric}
+\item{Flow_cd}{tag indicate data quality, character}
+...
 }
 }
 \source{

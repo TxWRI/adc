@@ -10,26 +10,22 @@
 #' @details The smooth discounted flow (SDF) was proposed by Kuhnert et al.
 #'   (2012). The premise of SDF is to incorporate the influence of historical
 #'   flows on flux:
-#'   \Sexpr[results=rd, stage=build]{
-#'   katex::math_to_rd("SDF(\\\\delta) = d\\\\kappa_{i-1} + (1-\\\\delta)\\\\hat{q}_{i-1}" ) }
-#'   , and
-#'   \Sexpr[results=rd, stage=build]{
-#'   katex::math_to_rd("\\\\kappa_{i}=\\\\sum_{m=1}^{i}\\\\hat{q}_m") }
-#'   for discount factor \Sexpr[results=rd, stage=build]{
-#'   katex::math_to_rd("\\\\delta", displayMode = FALSE)
-#'   }, where \Sexpr[results=rd, stage=build]{
-#'   katex::math_to_rd("\\\\kappa_{i}", displayMode = FALSE)}
-#'   represents cumulative flow up to the
-#'   \Sexpr[results=rd, stage=build]{
-#'   katex::math_to_rd("i", displayMode = FALSE)}th day.
+#'
+#'   \deqn{SDF(\delta) = d\kappa_{i-1} + (1-\delta)\hat{q}_{i-1},}
+#'
+#'   and
+#'
+#'   \deqn{\kappa_{i} = \sum_{m=1}^{i}\hat{q}_m,}
+
+#'   for discount factor \eqn{\delta}, where \eqn{\kappa_{i}} represents
+#'   cumulative flow up to the \eqn{i}th day.
 #' @references Kuhnert, Petra M., Brent L. Henderson, Stephen E. Lewis, Zoe T.
 #'   Bainbridge, Scott N. Wilkinson, and Jon E. Brodie. 2012. “Quantifying Total
 #'   Suspended Sediment Export from the Burdekin River Catchment Using the Loads
 #'   Regression Estimator Tool”
-#'   Water Resources Research 48 (4). \url{https://doi.org/10.1029/2011WR011080}.
+#'   Water Resources Research 48 (4). \doi{10.1029/2011WR011080}.
 #' @return vector of values the same length as \code{discharge}.
 #' @export
-#' @importFrom katex math_to_rd
 #' @examples
 #' # Standard use case
 #' ma <- sdf(lavaca$Flow, delta=0.95)

@@ -30,29 +30,27 @@ function utilizes the approach in Ladson et al. (2013).
 }
 \details{
 This function implements the Lyne-Hollick filter (Lyne and Hollick,
-  1979) using the approach detailed in Ladson et al. (2013). The filter is:
-  \Sexpr[results=rd, stage=build]{
-  katex::math_to_rd("Y_{k} = \\\\alpha \\\\times Y_{k-1} + \\\\frac{1+\\\\alpha}{2} \\\\times (Q_k - Q_{k-1})") }
-  where, \Sexpr[results=rd, stage=build]{katex::math_to_rd("Y_k",displayMode=FALSE)}
-  is the filtered quick response at the
-  \Sexpr[results=rd, stage=build]{katex::math_to_rd("k^{th}",displayMode=FALSE)}
-  sample. \Sexpr[results=rd, stage=build]{katex::math_to_rd("Q_{k}",displayMode=FALSE)}
-  is the original streamflow and \Sexpr[results=rd, stage=build]{katex::math_to_rd("\\\\alpha",displayMode=FALSE)}
-  is the filter parameter between [0-1].
+1979) using the approach detailed in Ladson et al. (2013). The filter is:
 
-  Ladson et al. (2013) suggest a standardized approach for applying the
-  filter by: (1) reflecting streamflow at the start and end of the series to
-  address warm-up and cool-down; (2) specify the initial value of each pass
-  as the measured flow; and (3) using three passes for the filter (forward,
-  backward, forward); Ladson et al. (2013) also provide additional
-  suggestions for handling missing values and appropriate alpha parameter
-  values that are not covered here.
+\deqn{Y_{k} = \alpha \times Y_{k-1} + \frac{1+\alpha}{2} \times (Q_k - Q_{k-1}),}
+
+where \eqn{Y_k} is the filtered quick response at the \eqn{k^{th}} sample.
+\eqn{Q_k} if the original streamflow and \eqn{\alpha} is the filter
+parameter between \code{[0-1]}.
+
+Ladson et al. (2013) suggest a standardized approach for applying the
+filter by: (1) reflecting streamflow at the start and end of the series to
+address warm-up and cool-down; (2) specify the initial value of each pass
+as the measured flow; and (3) using three passes for the filter (forward,
+backward, forward); Ladson et al. (2013) also provide additional
+suggestions for handling missing values and appropriate alpha parameter
+values that are not covered here.
 }
 \note{
-This function is based heavily on the baseflows function in the hydrostats
-  package by Nick Bond. However, the baseflow function returns additional
-  summary measures and utilizes different starting values. Filter outputs
-  will vary slightly.
+This function an updated and modified version of the \code{\link[hydrostats:baseflows]{hydrostats::baseflows()}}
+function in the hydrostats package by Nick Bond. The hydrostats version returns
+additional summary measures and utilizes different starting values. Outputs
+between the two packages will slightly vary.
 }
 \examples{
 # Standard use case
@@ -65,11 +63,18 @@ lavaca |> mutate(ma = bf_sep_lh(Flow, a = 0.975))
 }
 \references{
 Lyne, V., & Hollick, M. (1979, September). Stochastic time-variable
-  rainfall-runoff modelling. In Institute of Engineers Australia National
-  Conference (Vol. 79, No. 10, pp. 89-93). Barton, Australia: Institute of
-  Engineers Australia.
+rainfall-runoff modelling. In Institute of Engineers Australia National
+Conference (Vol. 79, No. 10, pp. 89-93). Barton, Australia: Institute of
+Engineers Australia.
 
-  Ladson, A. R., Brown, R., Neal, B., & Nathan, R. (2013). A standard
-  approach to baseflow separation using the Lyne and Hollick filter.
-  Australian Journal of Water Resources, 17(1), 25-34, \url{https://dx.doi.org/10.7158/W12-028.2013.17.1}.
+Ladson, A. R., Brown, R., Neal, B., & Nathan, R. (2013). A standard
+approach to baseflow separation using the Lyne and Hollick filter.
+Australian Journal of Water Resources, 17(1), 25-34,
+\doi{10.7158/W12-028.2013.17.1}.
+}
+\seealso{
+\code{\link[hydrostats:baseflows]{hydrostats::baseflows()}}
+}
+\author{
+Nick Bond \href{mailto:n.bond@latrobe.edu.au}{n.bond@latrobe.edu.au} modified by Michael Schramm
 }

@@ -3,10 +3,20 @@ Type: Package
 Title: Calculate Antecedant Discharge Conditions
 Version: 1.0.0
 Authors@R: 
-    person("Michael", "Schramm", , "mpschramm@gmail.com", role = c("aut", "cre"),
-           comment = c(ORCID = "0000-0003-1876-6592"))
+    c(person(given = "Michael", 
+             family = "Schramm", 
+             email = "mpschramm@gmail.com", 
+             role = c("aut", "cre", "cph"),
+             comment = c(ORCID = "0000-0003-1876-6592")),
+      person(given = "Nick", 
+             family = "Bond",  
+             role = "cph", 
+             comment = "Author of the hydrostats::baseflow function"))
 Maintainer: Michael Schramm <mpschramm@gmail.com>
-Description: Calculates some antecedant discharge conditions using daily discharge measurements. This includes estimated flow anomalies, base flow, and smooth discounted flows.
+Description: Calculates some antecedant discharge conditions useful in 
+    streamflow and water quality rating curve regression methods. This includes 
+    estimated flow anomalies, base flow, and smooth discounted flows calculated 
+    using mean daily streamflow measurements.
 License: MIT + file LICENSE
 URL: https://github.com/TxWRI/adc, https://txwri.github.io/adc/
 BugReports: https://github.com/TxWRI/adc/issues
@@ -15,10 +25,10 @@ LazyData: true
 Depends: 
     R (>= 2.10)
 Imports:
-    katex,
     runner,
     stats
 RoxygenNote: 7.2.2
+Roxygen: list(markdown = TRUE)
 Config/Needs/website: TxWRI/twriTemplates
 Suggests: 
     covr,

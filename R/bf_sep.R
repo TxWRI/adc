@@ -1,3 +1,26 @@
+## Code included in this file is modified from the exisiting baseflow function
+## in the hydrostats (https://github.com/nickbond/hydrostats) package licensed
+## under GPL v2 authored by Nick Bond.
+
+## Copyright (C) 2015 Nick Bond
+##
+## This program is free software; you can redistribute it and/or modify it
+## under the terms of the GNU General Public License as published by the
+## Free Software Foundation; either version 2, or (at your option) any
+## later version.
+##
+## These functions are distributed in the hope that they will be useful,
+## but WITHOUT ANY WARRANTY; without even the implied warranty of
+## MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+## GNU General Public License for more details.
+##
+## The text of the GNU General Public License, version 2, is available
+## as http://www.gnu.org/copyleft or by writing to the Free Software
+## Foundation, 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.
+##
+
+
+
 #' Baseflow Seperation
 #'
 #' Implements the Lyne and Hollick filter for baseflow seperation. This
@@ -15,14 +38,12 @@
 #'
 #' @details This function implements the Lyne-Hollick filter (Lyne and Hollick,
 #'   1979) using the approach detailed in Ladson et al. (2013). The filter is:
-#'   \Sexpr[results=rd, stage=build]{
-#'   katex::math_to_rd("Y_{k} = \\\\alpha \\\\times Y_{k-1} + \\\\frac{1+\\\\alpha}{2} \\\\times (Q_k - Q_{k-1})") }
-#'   where, \Sexpr[results=rd, stage=build]{katex::math_to_rd("Y_k",displayMode=FALSE)}
-#'   is the filtered quick response at the
-#'   \Sexpr[results=rd, stage=build]{katex::math_to_rd("k^{th}",displayMode=FALSE)}
-#'   sample. \Sexpr[results=rd, stage=build]{katex::math_to_rd("Q_{k}",displayMode=FALSE)}
-#'   is the original streamflow and \Sexpr[results=rd, stage=build]{katex::math_to_rd("\\\\alpha",displayMode=FALSE)}
-#'   is the filter parameter between [0-1].
+#'
+#'   \deqn{Y_{k} = \alpha \times Y_{k-1} + \frac{1+\alpha}{2} \times (Q_k - Q_{k-1}),}
+#'
+#'   where \eqn{Y_k} is the filtered quick response at the \eqn{k^{th}} sample.
+#'   \eqn{Q_k} if the original streamflow and \eqn{\alpha} is the filter
+#'   parameter between \code{[0-1]}.
 #'
 #'   Ladson et al. (2013) suggest a standardized approach for applying the
 #'   filter by: (1) reflecting streamflow at the start and end of the series to
@@ -39,16 +60,17 @@
 #'
 #'   Ladson, A. R., Brown, R., Neal, B., & Nathan, R. (2013). A standard
 #'   approach to baseflow separation using the Lyne and Hollick filter.
-#'   Australian Journal of Water Resources, 17(1), 25-34, \url{https://dx.doi.org/10.7158/W12-028.2013.17.1}.
+#'   Australian Journal of Water Resources, 17(1), 25-34,
+#'   \doi{10.7158/W12-028.2013.17.1}.
 #'
 #' @note
-#'   This function is based heavily on the baseflows function in the hydrostats
-#'   package by Nick Bond. However, the baseflow function returns additional
-#'   summary measures and utilizes different starting values. Filter outputs
-#'   will vary slightly.
-#'
+#'   This function an updated and modified version of the [hydrostats::baseflows()]
+#'   function in the hydrostats package by Nick Bond. The hydrostats version returns
+#'   additional summary measures and utilizes different starting values. Outputs
+#'   between the two packages will slightly vary.
+#' @seealso [hydrostats::baseflows()]
+#' @author Nick Bond <n.bond@latrobe.edu.au> modified by Michael Schramm
 #' @return vector of numeric values representing estimated baseflow.
-#' @importFrom katex math_to_rd
 #' @export
 #' @examples
 #' # Standard use case
