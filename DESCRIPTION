@@ -1,6 +1,6 @@
 Package: adc
 Type: Package
-Title: Calculate Antecedant Discharge Conditions
+Title: Calculate Antecedent Discharge Conditions
 Version: 1.0.0
 Authors@R: 
     c(person(given = "Michael", 
@@ -13,10 +13,11 @@ Authors@R:
              role = "ctb", 
              comment = "Author of the hydrostats::baseflow function"))
 Maintainer: Michael Schramm <mpschramm@gmail.com>
-Description: Calculates some antecedant discharge conditions useful in 
-    streamflow and water quality rating curve regression methods. This includes 
-    estimated flow anomalies, base flow, and smooth discounted flows calculated 
-    using mean daily streamflow measurements.
+Description: Calculates some antecedent discharge conditions useful in 
+    water quality modeling. Includes methods for calculating flow anomalies, 
+    base flow, and smooth discounted flows from daily flow measurements. 
+    Antecedent discharge algorithms are described and reviewed in 
+    <doi:10.1016/j.jhydrol.2016.12.052>.
 URL: https://github.com/TxWRI/adc, https://txwri.github.io/adc/
 BugReports: https://github.com/TxWRI/adc/issues
 Encoding: UTF-8
