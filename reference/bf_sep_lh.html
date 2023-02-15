@@ -111,10 +111,10 @@ values that are not covered here.</p>
     </div>
     <div class="section level2">
     <h2 id="note">Note<a class="anchor" aria-label="anchor" href="#note"></a></h2>
-    <p>This function an updated and modified version of the <code>hydrostats::baseflows()</code>
-function in the hydrostats package by Nick Bond. The hydrostats version returns
-additional summary measures and utilizes different starting values. Outputs
-between the two packages will slightly vary.</p>
+    <p>This function an updated and modified version of the <code>baseflows()</code>
+function in the hydrostats package by Nick Bond. The hydrostats version
+returns additional summary measures and utilizes different starting values.
+Outputs between the two packages will slightly vary.</p>
     </div>
     <div class="section level2">
     <h2 id="references">References<a class="anchor" aria-label="anchor" href="#references"></a></h2>
@@ -129,10 +129,6 @@ Australian Journal of Water Resources, 17(1), 25-34,
 .</p>
     </div>
     <div class="section level2">
-    <h2 id="see-also">See also<a class="anchor" aria-label="anchor" href="#see-also"></a></h2>
-    <div class="dont-index"><p><code>hydrostats::baseflows()</code></p></div>
-    </div>
-    <div class="section level2">
     <h2 id="author">Author<a class="anchor" aria-label="anchor" href="#author"></a></h2>
     <p>Nick Bond <a href="mailto:n.bond@latrobe.edu.au">n.bond@latrobe.edu.au</a> modified by Michael Schramm</p>
     </div>
@@ -144,8 +140,10 @@ Australian Journal of Water Resources, 17(1), 25-34,
 <span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">bf</span><span class="op">)</span></span>
 <span><span class="co"># will work in tidy workflows using dplyr if installed</span></span>
 <span><span class="kw">if</span> <span class="op">(</span><span class="cn">FALSE</span><span class="op">)</span> <span class="op">{</span></span>
-<span><span class="va">lavaca</span> <span class="op">|&gt;</span> <span class="fu">mutate</span><span class="op">(</span>ma <span class="op">=</span> <span class="fu">bf_sep_lh</span><span class="op">(</span><span class="va">Flow</span>, a <span class="op">=</span> <span class="fl">0.975</span><span class="op">)</span><span class="op">)</span></span>
-<span><span class="op">}</span></span></code></pre></div>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://dplyr.tidyverse.org" class="external-link">dplyr</a></span><span class="op">)</span></span>
+<span><span class="va">lavaca</span> <span class="op">|&gt;</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html" class="external-link">mutate</a></span><span class="op">(</span>ma <span class="op">=</span> <span class="fu">bf_sep_lh</span><span class="op">(</span><span class="va">Flow</span>, a <span class="op">=</span> <span class="fl">0.975</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="op">}</span></span>
+<span></span></code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>
     </nav></aside></div>

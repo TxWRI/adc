@@ -108,7 +108,8 @@ Water Resources Research 48 (4). <a href="https://doi.org/10.1029/2011WR011080" 
 <span></span>
 <span><span class="co"># will work in tidy workflows using dplyr if installed</span></span>
 <span><span class="kw">if</span> <span class="op">(</span><span class="cn">FALSE</span><span class="op">)</span> <span class="op">{</span></span>
-<span><span class="va">lavaca</span> <span class="op">|&gt;</span> <span class="fu">mutate</span><span class="op">(</span>ma <span class="op">=</span> <span class="fu">sdf</span><span class="op">(</span><span class="va">Flow</span>, delta <span class="op">=</span> <span class="fl">0.5</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://dplyr.tidyverse.org" class="external-link">dplyr</a></span><span class="op">)</span></span>
+<span><span class="va">lavaca</span> <span class="op">|&gt;</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html" class="external-link">mutate</a></span><span class="op">(</span>ma <span class="op">=</span> <span class="fu">sdf</span><span class="op">(</span><span class="va">Flow</span>, delta <span class="op">=</span> <span class="fl">0.5</span><span class="op">)</span><span class="op">)</span></span>
 <span><span class="op">}</span></span>
 <span></span>
 <span></span></code></pre></div>

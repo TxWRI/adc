@@ -3,7 +3,7 @@ pkgdown: 2.0.7
 pkgdown_sha: ~
 articles:
   Introduction: web/Introduction.html
-last_built: 2023-02-14T23:46Z
+last_built: 2023-02-15T02:23Z
 urls:
   reference: https://txwri.github.io/adc/reference
   article: https://txwri.github.io/adc/articles

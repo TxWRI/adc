@@ -94,8 +94,9 @@ Must be class <code>"Date"</code>.</p></dd>
 <span></span>
 <span><span class="co">## Use in dplyr</span></span>
 <span><span class="kw">if</span> <span class="op">(</span><span class="cn">FALSE</span><span class="op">)</span> <span class="op">{</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://dplyr.tidyverse.org" class="external-link">dplyr</a></span><span class="op">)</span></span>
 <span><span class="va">lavaca</span> <span class="op">|&gt;</span></span>
-<span>    <span class="fu">mutate</span><span class="op">(</span>f_q1 <span class="op">=</span> <span class="fu">rate_of_change</span><span class="op">(</span><span class="va">Flow</span>, <span class="va">Date</span><span class="op">)</span>,</span>
+<span>    <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html" class="external-link">mutate</a></span><span class="op">(</span>f_q1 <span class="op">=</span> <span class="fu">rate_of_change</span><span class="op">(</span><span class="va">Flow</span>, <span class="va">Date</span><span class="op">)</span>,</span>
 <span>           dQdT <span class="op">=</span> <span class="fu">rate_of_change</span><span class="op">(</span><span class="va">Flow</span>, <span class="va">Date</span>, smooth <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span><span class="op">)</span></span>
 <span><span class="op">}</span></span>
 <span></span></code></pre></div>
