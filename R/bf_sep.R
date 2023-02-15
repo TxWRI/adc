@@ -64,11 +64,10 @@
 #'   \doi{10.7158/W12-028.2013.17.1}.
 #'
 #' @note
-#'   This function an updated and modified version of the [hydrostats::baseflows()]
-#'   function in the hydrostats package by Nick Bond. The hydrostats version returns
-#'   additional summary measures and utilizes different starting values. Outputs
-#'   between the two packages will slightly vary.
-#' @seealso [hydrostats::baseflows()]
+#'   This function an updated and modified version of the `baseflows()`
+#'   function in the hydrostats package by Nick Bond. The hydrostats version
+#'   returns additional summary measures and utilizes different starting values.
+#'   Outputs between the two packages will slightly vary.
 #' @author Nick Bond <n.bond@latrobe.edu.au> modified by Michael Schramm
 #' @return vector of numeric values representing estimated baseflow.
 #' @export
@@ -77,8 +76,8 @@
 #' bf <- bf_sep_lh(lavaca$Flow, a = 0.975)
 #' head(bf)
 #' # will work in tidy workflows using dplyr if installed
-#' \dontrun{
-#' lavaca |> mutate(ma = bf_sep_lh(Flow, a = 0.975))
+#' if (requireNamespace("dplyr", quietly = TRUE)) {
+#'   lavaca |> mutate(ma = bf_sep_lh(Flow, a = 0.975))
 #' }
 bf_sep_lh <- function(discharge,
                    a = 0.98,

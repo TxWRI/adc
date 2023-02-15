@@ -47,18 +47,18 @@ suggestions for handling missing values and appropriate alpha parameter
 values that are not covered here.
 }
 \note{
-This function an updated and modified version of the \code{\link[hydrostats:baseflows]{hydrostats::baseflows()}}
-function in the hydrostats package by Nick Bond. The hydrostats version returns
-additional summary measures and utilizes different starting values. Outputs
-between the two packages will slightly vary.
+This function an updated and modified version of the \code{baseflows()}
+function in the hydrostats package by Nick Bond. The hydrostats version
+returns additional summary measures and utilizes different starting values.
+Outputs between the two packages will slightly vary.
 }
 \examples{
 # Standard use case
 bf <- bf_sep_lh(lavaca$Flow, a = 0.975)
 head(bf)
 # will work in tidy workflows using dplyr if installed
-\dontrun{
-lavaca |> mutate(ma = bf_sep_lh(Flow, a = 0.975))
+if (requireNamespace("dplyr", quietly = TRUE)) {
+  lavaca |> mutate(ma = bf_sep_lh(Flow, a = 0.975))
 }
 }
 \references{
@@ -71,9 +71,6 @@ Ladson, A. R., Brown, R., Neal, B., & Nathan, R. (2013). A standard
 approach to baseflow separation using the Lyne and Hollick filter.
 Australian Journal of Water Resources, 17(1), 25-34,
 \doi{10.7158/W12-028.2013.17.1}.
-}
-\seealso{
-\code{\link[hydrostats:baseflows]{hydrostats::baseflows()}}
 }
 \author{
 Nick Bond \href{mailto:n.bond@latrobe.edu.au}{n.bond@latrobe.edu.au} modified by Michael Schramm
