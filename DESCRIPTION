@@ -10,7 +10,7 @@ Authors@R:
              comment = c(ORCID = "0000-0003-1876-6592")),
       person(given = "Nick", 
              family = "Bond",  
-             role = "cph", 
+             role = "ctb", 
              comment = "Author of the hydrostats::baseflow function"))
 Maintainer: Michael Schramm <mpschramm@gmail.com>
 Description: Calculates some antecedant discharge conditions useful in 
