@@ -17,7 +17,6 @@ Description: Calculates some antecedant discharge conditions useful in
     streamflow and water quality rating curve regression methods. This includes 
     estimated flow anomalies, base flow, and smooth discounted flows calculated 
     using mean daily streamflow measurements.
-License: MIT + file LICENSE
 URL: https://github.com/TxWRI/adc, https://txwri.github.io/adc/
 BugReports: https://github.com/TxWRI/adc/issues
 Encoding: UTF-8
@@ -34,3 +33,4 @@ Suggests:
     covr,
     testthat (>= 3.0.0)
 Config/testthat/edition: 3
+License: GPL (>= 3)
