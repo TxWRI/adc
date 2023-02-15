@@ -58,6 +58,8 @@ be followed by an \code{"s"}. Additionally, \code{T_2} accepts
             clean_up = TRUE,
             transform = "log10")
 
+ \donttest{
+
  ## Mid-term Flow Anomaly MTFA
  MTFA <- fa(lavaca$Flow,
             dates = lavaca$Date,
@@ -73,6 +75,7 @@ be followed by an \code{"s"}. Additionally, \code{T_2} accepts
             T_2 = "1 month",
             clean_up = TRUE,
             transform = "log10")
+ }
 }
 \references{
 Ryberg, Karen R., and Aldo V. Vecchia. 2012. “WaterData—An R Package for

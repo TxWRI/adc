@@ -57,6 +57,8 @@
 #'             clean_up = TRUE,
 #'             transform = "log10")
 #'
+#'  \donttest{
+#'
 #'  ## Mid-term Flow Anomaly MTFA
 #'  MTFA <- fa(lavaca$Flow,
 #'             dates = lavaca$Date,
@@ -72,6 +74,7 @@
 #'             T_2 = "1 month",
 #'             clean_up = TRUE,
 #'             transform = "log10")
+#'  }
 
 fa <- function(discharge,
                dates,
