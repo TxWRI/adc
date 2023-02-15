@@ -31,6 +31,7 @@ head(rate2)
 
 ## Use in dplyr
 \dontrun{
+library(dplyr)
 lavaca |>
     mutate(f_q1 = rate_of_change(Flow, Date),
            dQdT = rate_of_change(Flow, Date, smooth = FALSE))

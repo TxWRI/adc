@@ -57,9 +57,11 @@ Outputs between the two packages will slightly vary.
 bf <- bf_sep_lh(lavaca$Flow, a = 0.975)
 head(bf)
 # will work in tidy workflows using dplyr if installed
-if (requireNamespace("dplyr", quietly = TRUE)) {
-  lavaca |> mutate(ma = bf_sep_lh(Flow, a = 0.975))
+\dontrun{
+library(dplyr)
+lavaca |> mutate(ma = bf_sep_lh(Flow, a = 0.975))
 }
+
 }
 \references{
 Lyne, V., & Hollick, M. (1979, September). Stochastic time-variable
