@@ -38,12 +38,6 @@ cumulative flow up to the \eqn{i}th day.
 ma <- sdf(lavaca$Flow, delta=0.95)
 head(ma)
 
-# will work in tidy workflows using dplyr if installed
-\dontrun{
-library(dplyr)
-lavaca |> mutate(ma = sdf(Flow, delta = 0.5))
-}
-
 
 }
 \references{
