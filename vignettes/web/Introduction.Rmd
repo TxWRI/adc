@@ -5,7 +5,7 @@ date: "`r Sys.Date()`"
 output:
   html_document:
     math_method: "mathjax"
-    mathjax: "local"
+    mathjax: "default"
 bibliography: references.yaml
 csl: https://raw.githubusercontent.com/TxWRI/csl/main/twri-technical-report.csl
 ---
