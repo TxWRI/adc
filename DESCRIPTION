@@ -1,7 +1,7 @@
 Type: Package
 Package: adc
 Title: Calculate Antecedent Discharge Conditions
-Version: 1.0.1
+Version: 1.0.0
 Authors@R: c(
     person("Michael", "Schramm", , "mpschramm@gmail.com", role = c("aut", "cre", "cph"),
            comment = c(ORCID = "0000-0003-1876-6592")),
